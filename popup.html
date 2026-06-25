@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BookmarkAI Url Sync</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <img class="hero-icon" src="icons/icon48.png" alt="">
+      <div class="hero-copy">
+        <h1>BookmarkAI Url Sync</h1>
+        <div class="status-row">
+          <p id="syncStatus">Ready</p>
+          <button id="openWebsiteButton" class="status-button" type="button">Go to web</button>
+        </div>
+      </div>
+      <div class="hero-toggle">
+        <span id="activeText">Active</span>
+        <label class="switch" for="activeToggle" aria-label="Activate extension">
+          <input id="activeToggle" type="checkbox">
+          <span></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <label for="extensionCode">Extension Code</label>
+      <div class="input-row">
+        <input id="extensionCode" type="text" inputmode="text" maxlength="11" placeholder="x1y2-123456" autocomplete="off">
+        <button id="saveEditButton" type="button">Save</button>
+      </div>
+      <p id="codeMessage" class="message"></p>
+    </section>
+
+    <section class="card link-card">
+      <div class="section-title">
+        <span>Latest Link</span>
+        <button id="copyButton" type="button">Copy</button>
+      </div>
+      <a id="latestLink" href="#" target="_blank" rel="noreferrer">No link detected yet</a>
+      <p id="savedAt" class="message"></p>
+    </section>
+
+    <section id="apiMessageCard" class="card api-message-card hidden" aria-live="polite">
+      <span>Message</span>
+      <p id="apiMessage"></p>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
