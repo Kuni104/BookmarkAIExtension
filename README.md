@@ -19,7 +19,6 @@ Trước khi sử dụng extension, cần chuẩn bị:
   * Brave
   * Cốc Cốc
 * Source code của dự án đã được tải về máy.
-* Backend BookmarkAI nên được chạy trước khi test chức năng gửi dữ liệu.
 * Người dùng cần có Extension Code hợp lệ từ hệ thống BookmarkAI.
 
 Định dạng Extension Code:
