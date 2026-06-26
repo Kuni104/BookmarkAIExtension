@@ -341,74 +341,8 @@ BookmarkAI hướng tới mục tiêu giúp người dùng tiết kiệm thời 
 
 ---
 
-## 6. Công nghệ sử dụng
 
-Backend của dự án sử dụng:
-
-```text
-ASP.NET Core Web API
-Entity Framework Core
-MySQL
-JWT Authentication
-Repository-Service Pattern
-VietQR / SePay payment integration
-YouTube API
-Google GenAI
-```
-
-Extension sử dụng:
-
-```text
-Chrome Extension Manifest V3
-JavaScript
-HTML
-CSS
-Chrome Storage API
-Chrome Tabs API
-```
-
----
-
-## 7. Tóm tắt chức năng chính
-
-Các chức năng chính của dự án gồm:
-
-* Đăng ký và đăng nhập tài khoản.
-* Xác thực bằng JWT.
-* Quản lý thông tin người dùng.
-* Tạo và thay đổi Extension Code.
-* Lưu URL/video từ extension về backend.
-* Quản lý video đã lưu.
-* Tìm kiếm video theo tiêu đề, URL hoặc tag.
-* Quản lý tag.
-* Quản lý playlist.
-* Thêm hoặc xóa video khỏi playlist.
-* Thanh toán premium bằng VietQR/SePay.
-* Kiểm tra thời hạn premium.
-* Dashboard thống kê cho admin.
-* Extension local để đồng bộ URL từ trình duyệt.
-
----
-
-## 8. Cách kiểm tra extension sau khi cài
-
-Sau khi cài extension local thành công:
-
-1. Chạy backend BookmarkAI.
-2. Mở website BookmarkAI.
-3. Đăng nhập tài khoản người dùng.
-4. Kiểm tra hoặc tạo Extension Code trong profile.
-5. Mở extension trên trình duyệt.
-6. Nhập Extension Code và nhấn Save.
-7. Bật trạng thái Active.
-8. Mở một video YouTube hoặc một trang được hỗ trợ.
-9. Quay lại website BookmarkAI để kiểm tra dữ liệu đã được lưu.
-
-Nếu dữ liệu chưa xuất hiện ngay, hãy chờ một lúc vì backend có thể cần thời gian để xử lý dữ liệu hoặc gọi API bên thứ ba.
-
----
-
-## 9. Lỗi thường gặp
+## 6. Lỗi thường gặp
 
 ### Không thấy nút Load unpacked
 
@@ -474,7 +408,7 @@ Cách xử lý:
 
 ---
 
-## 10. Ghi chú cho bản Release #1.0
+## 7. Ghi chú cho bản Release #1.0
 
 Đây là bản release dùng để cài đặt và kiểm thử extension local. Người dùng không cần tải extension từ Chrome Extension Store. Chỉ cần tải source code, giải nén, bật Developer Mode và load thư mục extension vào trình duyệt.
 
