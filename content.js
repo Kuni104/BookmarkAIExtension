@@ -865,6 +865,29 @@ function showApiMessageToast(message) {
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message?.type === "REQUEST_CURRENT_PAGE_DATA") {
+    (async () => {
+      const url = getCurrentSupportedUrl();
+
+      if (!url) {
+        sendResponse({ ok: false, url: "", pageData: null });
+        return;
+      }
+
+      const pageData = isYoutubeBookmarkUrl(url)
+        ? getFreshPageData(url)
+        : await getPageDataWithRetry(url);
+
+      sendResponse({
+        ok: Boolean(pageData),
+        url,
+        pageData
+      });
+    })();
+
+    return true;
+  }
+
   if (message?.type === "REQUEST_CURRENT_PAGE" || message?.type === "REQUEST_CURRENT_VIDEO") {
     const url = getCurrentSupportedUrl();
 
