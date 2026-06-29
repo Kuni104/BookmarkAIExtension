@@ -12,8 +12,13 @@ const apiMessage = document.getElementById("apiMessage");
 const activeToggle = document.getElementById("activeToggle");
 const activeText = document.getElementById("activeText");
 const openWebsiteButton = document.getElementById("openWebsiteButton");
+const sendModeToggle = document.getElementById("sendModeToggle");
+const sendModeText = document.getElementById("sendModeText");
+const sendNowButton = document.getElementById("sendNowButton");
 
 let isLocked = false;
+let currentActive = true;
+let currentSendMode = "auto";
 
 init();
 
@@ -59,6 +64,42 @@ openWebsiteButton.addEventListener("click", () => {
   chrome.tabs.create({ url: "http://localhost:54343" });
 });
 
+sendModeToggle.addEventListener("change", async () => {
+  const mode = sendModeToggle.checked ? "manual" : "auto";
+  currentSendMode = mode;
+  await chrome.storage.local.set({ sendMode: mode, lastApiMessage: "", lastApiMessageAt: "" });
+  updateSendModeUi(mode);
+
+  chrome.runtime.sendMessage({
+    type: "SEND_MODE_CHANGED",
+    mode
+  });
+});
+
+sendNowButton.addEventListener("click", async () => {
+  if (currentSendMode !== "manual") {
+    return;
+  }
+
+  sendNowButton.disabled = true;
+  sendNowButton.textContent = "Sending";
+
+  try {
+    const response = await chrome.runtime.sendMessage({ type: "MANUAL_SEND_CURRENT_PAGE" });
+
+    if (!response?.ok) {
+      showMessage(response?.message || "Could not send current page.", "error");
+    } else {
+      showMessage("Sent.", "success");
+    }
+  } catch (error) {
+    showMessage(error?.message || "Could not send current page.", "error");
+  } finally {
+    sendNowButton.textContent = "Send now";
+    updateSendModeUi(currentSendMode);
+  }
+});
+
 copyButton.addEventListener("click", async () => {
   const link = latestLink.dataset.link || "";
 
@@ -82,12 +123,16 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
     loadLatestLink();
   }
 
-  if (changes.lastSyncStatus || changes.lastSyncError || changes.extensionActive) {
+  if (changes.lastSyncStatus || changes.lastSyncError || changes.extensionActive || changes.sendMode) {
     loadStatus();
   }
 
   if (changes.extensionActive) {
     updateActiveUi(changes.extensionActive.newValue !== false);
+  }
+
+  if (changes.sendMode) {
+    updateSendModeUi(normalizeSendMode(changes.sendMode.newValue));
   }
 
   if (changes.lastApiMessage || changes.lastApiMessageAt) {
@@ -96,12 +141,14 @@ chrome.storage.onChanged.addListener((changes, areaName) => {
 });
 
 async function init() {
-  const { extensionCode, extensionActive } = await chrome.storage.local.get([
+  const { extensionCode, extensionActive, sendMode } = await chrome.storage.local.get([
     "extensionCode",
-    "extensionActive"
+    "extensionActive",
+    "sendMode"
   ]);
 
   updateActiveUi(extensionActive !== false);
+  updateSendModeUi(normalizeSendMode(sendMode));
 
   if (CODE_PATTERN.test(extensionCode || "")) {
     input.value = extensionCode;
@@ -137,6 +184,7 @@ function lockCode() {
   input.readOnly = true;
   input.classList.add("locked");
   button.textContent = "Edit";
+  updateSendModeUi(currentSendMode);
 }
 
 function unlockCode() {
@@ -145,6 +193,7 @@ function unlockCode() {
   input.classList.remove("locked");
   button.textContent = "Save";
   showMessage("", "");
+  updateSendModeUi(currentSendMode);
   input.focus();
   input.setSelectionRange(input.value.length, input.value.length);
 }
@@ -184,11 +233,14 @@ function setEmptyLink(text) {
 }
 
 async function loadStatus() {
-  const { lastSyncStatus, lastSyncError, extensionActive } = await chrome.storage.local.get([
+  const { lastSyncStatus, lastSyncError, extensionActive, sendMode } = await chrome.storage.local.get([
     "lastSyncStatus",
     "lastSyncError",
-    "extensionActive"
+    "extensionActive",
+    "sendMode"
   ]);
+
+  currentSendMode = normalizeSendMode(sendMode);
 
   if (extensionActive === false) {
     syncStatus.textContent = "Inactive";
@@ -215,17 +267,37 @@ async function loadStatus() {
     return;
   }
 
+  if (lastSyncStatus === "manual_ready") {
+    syncStatus.textContent = "Manual";
+    return;
+  }
+
   if (lastSyncStatus === "inactive") {
     syncStatus.textContent = "Inactive";
     return;
   }
 
-  syncStatus.textContent = "Ready";
+  syncStatus.textContent = currentSendMode === "manual" ? "Manual" : "Ready";
 }
 
 function updateActiveUi(active) {
+  currentActive = active;
   activeToggle.checked = active;
   activeText.textContent = active ? "Active" : "Inactive";
+  updateSendModeUi(currentSendMode);
+}
+
+function updateSendModeUi(mode) {
+  currentSendMode = normalizeSendMode(mode);
+  sendModeToggle.checked = currentSendMode === "manual";
+  sendModeText.textContent = currentSendMode === "manual" ? "Manual" : "Auto";
+
+  const validCode = CODE_PATTERN.test(input.value || "");
+  sendNowButton.disabled = currentSendMode !== "manual" || !currentActive || !validCode;
+}
+
+function normalizeSendMode(value) {
+  return value === "manual" ? "manual" : "auto";
 }
 
 async function loadApiMessage() {
