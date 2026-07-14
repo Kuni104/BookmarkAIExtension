@@ -1,38 +1,38 @@
-# BookmarkAI Url Sync Extension
+# BookmarkAI URL Sync Extension
 
 ## RELEASE VERSION #1.0
 
-BookmarkAI Url Sync là extension dùng để đồng bộ URL từ trình duyệt về hệ thống BookmarkAI. Extension này được cài đặt trực tiếp từ source code local, không cài thông qua Chrome Extension Store.
+BookmarkAI URL Sync is a browser extension designed to synchronize URLs from your browser with the BookmarkAI system. This extension is installed directly from the local source code instead of the Chrome Web Store.
 
-Extension hỗ trợ người dùng lưu và gửi thông tin trang đang xem về backend của BookmarkAI thông qua Extension Code. Khi người dùng truy cập các nền tảng được hỗ trợ như YouTube, Facebook, Reddit hoặc TikTok, extension có thể phát hiện đường dẫn hiện tại và gửi dữ liệu về hệ thống để phục vụ việc lưu bookmark, quản lý video, playlist và tra cứu nội dung sau này.
+The extension allows users to save and send information about the currently viewed webpage to the BookmarkAI backend using an Extension Code. When users visit supported platforms such as YouTube, Facebook, Reddit, or TikTok, the extension automatically detects the current URL and sends it to the system for bookmark storage, video management, playlist organization, and future content retrieval.
 
 ---
 
-## 1. Yêu cầu trước khi cài đặt
+# 1. Prerequisites
 
-Trước khi sử dụng extension, cần chuẩn bị:
+Before installing the extension, make sure you have:
 
-* Trình duyệt hỗ trợ extension dạng Chromium, ví dụ:
+* A Chromium-based browser, such as:
 
   * Google Chrome
   * Microsoft Edge
   * Brave
   * Cốc Cốc
-* Source code của dự án đã được tải về máy.
-* Người dùng cần có Extension Code hợp lệ từ hệ thống BookmarkAI.
+* The project source code downloaded to your computer.
+* A valid **Extension Code** provided by the BookmarkAI system.
 
-Định dạng Extension Code:
+Extension Code format:
 
 ```text
 xxxx-123456
 ```
 
-Trong đó:
+Where:
 
-* `xxxx`: 4 ký tự đầu, có thể là chữ hoặc số.
-* `123456`: 6 chữ số cuối.
+* `xxxx`: The first 4 characters, which can be letters or numbers.
+* `123456`: The last 6 digits.
 
-Ví dụ:
+Example:
 
 ```text
 a1b2-123456
@@ -40,13 +40,13 @@ a1b2-123456
 
 ---
 
-## 2. Cách cài đặt extension local
+# 2. Installing the Extension Locally
 
-### Bước 1: Tải source code về máy
+## Step 1: Download the Source Code
 
-Tải file source code của dự án về máy tính.
+Download the project source code to your computer.
 
-Nếu source code được cung cấp dưới dạng file `.zip`, hãy lưu file vào một thư mục dễ tìm, ví dụ:
+If the source code is provided as a `.zip` file, save it to an easy-to-find location, for example:
 
 ```text
 Downloads
@@ -56,65 +56,65 @@ D:\Projects
 
 ---
 
-### Bước 2: Giải nén file
+## Step 2: Extract the ZIP File
 
-Nhấn chuột phải vào file `.zip`, sau đó chọn:
+Right-click the `.zip` file and choose:
 
 ```text
 Extract All...
 ```
 
-hoặc:
+or
 
 ```text
-Giải nén tại đây
+Extract Here
 ```
 
-Sau khi giải nén, trong thư mục dự án sẽ có thư mục extension.
+After extraction, the project will contain the extension folder.
 
-Thư mục extension trong dự án này là:
+For this project, the extension folder is:
 
 ```text
 bookmarkai-url-sync-extension-v25
 ```
 
-Lưu ý: Khi load extension, cần chọn đúng thư mục chứa file `manifest.json`.
+**Note:** When loading the extension, make sure you select the folder that contains the `manifest.json` file.
 
 ---
 
-### Bước 3: Mở trang quản lý extension trên trình duyệt
+## Step 3: Open the Browser Extension Management Page
 
-Mở trình duyệt bạn đang sử dụng, sau đó vào phần quản lý extension.
+Open your browser and navigate to the Extensions Management page.
 
-Với Google Chrome, có thể truy cập bằng một trong hai cách:
+For Google Chrome:
 
-Cách 1:
+Method 1:
 
 ```text
-Menu ba chấm ở góc phải trên → Extensions → Manage Extensions
+Three-dot Menu → Extensions → Manage Extensions
 ```
 
-Cách 2:
+Method 2:
 
-Nhập đường dẫn sau vào thanh địa chỉ:
+Enter the following URL into the address bar:
 
 ```text
 chrome://extensions/
 ```
 
-Với Microsoft Edge:
+For Microsoft Edge:
 
 ```text
 edge://extensions/
 ```
 
-Với Brave:
+For Brave:
 
 ```text
 brave://extensions/
 ```
 
-Với Cốc Cốc:
+For Cốc Cốc:
 
 ```text
 coccoc://extensions/
@@ -122,126 +122,119 @@ coccoc://extensions/
 
 ---
 
-### Bước 4: Bật Developer Mode
+## Step 4: Enable Developer Mode
 
-Ở trang quản lý extension, bật chế độ:
+On the Extensions page, enable:
 
 ```text
 Developer mode
 ```
 
-Nút này thường nằm ở góc phải trên hoặc góc trái trên, tùy trình duyệt.
+Depending on your browser, this switch is usually located in the top-right or top-left corner.
 
-Sau khi bật Developer Mode, trình duyệt sẽ hiện thêm các nút dành cho lập trình viên, trong đó có nút:
+After enabling Developer Mode, additional developer options will appear, including:
 
 ```text
 Load unpacked
-```
-
-hoặc:
-
-```text
-Tải tiện ích đã giải nén
 ```
 
 ---
 
-### Bước 5: Load extension vào trình duyệt
+## Step 5: Load the Extension
 
-Nhấn nút:
+Click:
 
 ```text
 Load unpacked
 ```
 
-Sau đó chọn thư mục extension đã giải nén:
+Then select the extracted extension folder:
 
 ```text
 bookmarkai-url-sync-extension-v25
 ```
 
-Quan trọng: Chỉ chọn thư mục extension, không chọn toàn bộ thư mục backend nếu trong đó có nhiều folder khác.
+**Important:** Select only the extension folder—not the entire backend project if it contains multiple folders.
 
-Thư mục được chọn phải chứa file:
+The selected folder **must** contain:
 
 ```text
 manifest.json
 ```
 
-Nếu chọn đúng thư mục, extension sẽ xuất hiện trong danh sách extension của trình duyệt với tên:
+If everything is correct, the extension will appear in your browser with the name:
 
 ```text
-BookmarkAI Url Sync
+BookmarkAI URL Sync
 ```
 
 ---
 
-### Bước 6: Ghim extension lên thanh công cụ
+## Step 6: Pin the Extension
 
-Sau khi load extension thành công, nhấn vào biểu tượng extension trên trình duyệt.
+After successfully loading the extension, click the Extensions icon in your browser.
 
-Nếu chưa thấy extension ở thanh công cụ:
+If the extension is not visible on the toolbar:
 
-1. Nhấn biểu tượng mảnh ghép Extensions.
-2. Tìm `BookmarkAI Url Sync`.
-3. Nhấn biểu tượng ghim để pin extension ra ngoài thanh công cụ.
+1. Click the Extensions (puzzle) icon.
+2. Find **BookmarkAI URL Sync**.
+3. Click the Pin icon.
 
-Việc ghim extension giúp người dùng mở extension nhanh hơn khi cần nhập Extension Code hoặc kiểm tra trạng thái đồng bộ.
-
----
-
-## 3. Cách sử dụng extension
-
-### Bước 1: Mở extension
-
-Nhấn vào biểu tượng:
-
-```text
-BookmarkAI Url Sync
-```
-
-trên thanh công cụ của trình duyệt.
-
-Giao diện extension sẽ hiển thị các thông tin chính như:
-
-* Trạng thái extension.
-* Ô nhập Extension Code.
-* Nút Save/Edit.
-* Link gần nhất được phát hiện.
-* Nút Copy link.
-* Nút Go to web.
+Pinning the extension allows quick access whenever you need to enter your Extension Code or check the synchronization status.
 
 ---
 
-### Bước 2: Nhập Extension Code
+# 3. How to Use the Extension
 
-Nhập Extension Code được cấp từ hệ thống BookmarkAI vào ô:
+## Step 1: Open the Extension
+
+Click the **BookmarkAI URL Sync** icon on your browser toolbar.
+
+The popup interface includes:
+
+* Extension status
+* Extension Code input field
+* Save/Edit button
+* Latest detected URL
+* Copy Link button
+* Go to Web button
+
+---
+
+## Step 2: Enter Your Extension Code
+
+Enter the Extension Code provided by the BookmarkAI system into the:
 
 ```text
 Extension Code
 ```
 
-Ví dụ:
+field.
+
+Example:
 
 ```text
 a1b2-123456
 ```
 
-Sau đó nhấn:
+Then click:
 
 ```text
 Save
 ```
 
-Nếu code hợp lệ, extension sẽ lưu code vào trình duyệt. Sau khi lưu, ô nhập sẽ bị khóa lại để tránh người dùng sửa nhầm.
+If the code is valid, it will be saved locally in the browser. After saving, the input field will be locked to prevent accidental modifications.
 
-Nếu muốn đổi Extension Code, nhấn:
+To change the Extension Code:
+
+1. Click:
 
 ```text
 Edit
 ```
 
-sau đó nhập code mới và nhấn lại:
+2. Enter the new code.
+3. Click:
 
 ```text
 Save
@@ -249,23 +242,23 @@ Save
 
 ---
 
-### Bước 3: Bật trạng thái Active
+## Step 3: Enable Active Status
 
-Trong giao diện extension có công tắc trạng thái.
+The extension popup includes a toggle switch.
 
-Khi extension đang bật, trạng thái sẽ là:
+When enabled, the extension status will display:
 
 ```text
 Active
 ```
 
-Nếu tắt công tắc này, extension sẽ không tiếp tục gửi dữ liệu trang hiện tại về backend.
+If the extension is turned off, it will stop sending webpage information to the backend.
 
 ---
 
-### Bước 4: Truy cập nền tảng được hỗ trợ
+## Step 4: Visit a Supported Platform
 
-Sau khi nhập Extension Code và bật extension, người dùng có thể truy cập các nền tảng được hỗ trợ, ví dụ:
+After entering a valid Extension Code and enabling the extension, visit one of the supported platforms, for example:
 
 ```text
 YouTube
@@ -274,101 +267,104 @@ Reddit
 TikTok
 ```
 
-Khi người dùng mở hoặc chuyển sang một nội dung mới, extension sẽ phát hiện URL hiện tại và gửi dữ liệu về API của hệ thống BookmarkAI.
+Whenever you open or navigate to new content, the extension automatically detects the current URL and sends it to the BookmarkAI API.
 
 ---
 
-### Bước 5: Kiểm tra link gần nhất
+## Step 5: Check the Latest Detected Link
 
-Trong popup của extension có phần:
+The popup contains a section called:
 
 ```text
 Latest Link
 ```
 
-Phần này hiển thị đường dẫn gần nhất mà extension phát hiện được.
+This displays the most recent URL detected by the extension.
 
-Người dùng có thể nhấn:
+Click:
 
 ```text
 Copy
 ```
 
-để copy link đó.
+to copy the URL to your clipboard.
 
 ---
 
-### Bước 6: Mở website BookmarkAI
+## Step 6: Open the BookmarkAI Website
 
-Trong extension có nút:
+The extension also provides a button:
 
 ```text
-Go to web
+Go to Web
 ```
 
-Khi nhấn vào nút này, trình duyệt sẽ mở website local của BookmarkAI:
+Clicking this button opens the local BookmarkAI website:
 
 ```text
-http://localhost:54343
+https://bookmarkai.site/
 ```
 
-Người dùng có thể vào website để đăng nhập, xem video/bookmark đã lưu, quản lý playlist và kiểm tra thông tin tài khoản.
+From there, users can log in, view saved bookmarks and videos, manage playlists, and access their account information.
 
 ---
 
-## 4. Lưu ý khi sử dụng
+# 4. Notes
 
-* Extension này được cài bằng source code local, không phải bản phát hành trên Chrome Extension Store.
-* Nếu trình duyệt hiển thị cảnh báo extension ở Developer Mode, đây là hành vi bình thường khi dùng extension local.
-* Không xóa thư mục extension sau khi đã load vào trình duyệt. Nếu xóa hoặc đổi vị trí thư mục, extension có thể bị lỗi.
-* Nếu sửa code extension, cần vào trang quản lý extension và nhấn nút Reload để tải lại bản mới.
-* Backend cần chạy đúng port và đúng cấu hình API để extension gửi dữ liệu thành công.
-* Nếu Extension Code không đúng định dạng hoặc không tồn tại trong hệ thống, extension sẽ không thể đồng bộ dữ liệu chính xác.
-
----
-
-## 5. Mô tả dự án
-
-BookmarkAI là hệ thống hỗ trợ người dùng lưu lại nội dung đã xem trên Internet, đặc biệt là các video hoặc bài viết từ những nền tảng phổ biến. Thay vì phải lưu thủ công từng đường dẫn, người dùng có thể sử dụng extension để tự động gửi URL về hệ thống. Sau đó, backend sẽ xử lý dữ liệu và lưu nội dung vào tài khoản tương ứng thông qua Extension Code.
-
-Dự án được xây dựng theo mô hình backend API kết hợp với browser extension. Backend chịu trách nhiệm quản lý người dùng, xác thực tài khoản, video, tag, playlist, bookmark, thanh toán premium và dashboard thống kê. Extension đóng vai trò là cầu nối giữa trình duyệt của người dùng và hệ thống BookmarkAI, giúp quá trình lưu nội dung diễn ra nhanh và thuận tiện hơn.
-
-Một chức năng quan trọng của hệ thống là quản lý video và playlist. Người dùng có thể lưu video, tìm kiếm theo tiêu đề hoặc tag, thêm video vào playlist và quản lý các playlist cá nhân. Hệ thống cũng có thể hỗ trợ tạo playlist tự động dựa trên tag, giúp nội dung được phân loại rõ ràng hơn và dễ tìm lại hơn.
-
-Ngoài ra, dự án còn có phân quyền người dùng và quản trị viên. Người dùng thông thường có thể quản lý profile, Extension Code, bookmark và playlist của mình. Quản trị viên có thể xem danh sách người dùng, video, tag và các dữ liệu thống kê trong dashboard. Điều này giúp hệ thống phù hợp cho cả nhu cầu sử dụng cá nhân lẫn quản lý dữ liệu ở cấp hệ thống.
-
-BookmarkAI hướng tới mục tiêu giúp người dùng tiết kiệm thời gian khi lưu trữ và tìm lại nội dung. Với extension local, người dùng có thể test nhanh chức năng đồng bộ URL trong môi trường phát triển mà không cần phải publish extension lên Chrome Extension Store.
+* This extension is installed from local source code and is **not** distributed through the Chrome Web Store.
+* If your browser displays a warning about Developer Mode extensions, this is expected behavior for locally installed extensions.
+* Do not delete or move the extension folder after installation. Otherwise, the extension may stop working.
+* After modifying the extension source code, go to the Extensions page and click **Reload** to load the latest changes.
+* The backend server must be running with the correct API configuration for synchronization to work.
+* If the Extension Code is invalid or does not exist in the system, synchronization will fail.
 
 ---
 
+# 5. Project Overview
 
-## 6. Lỗi thường gặp
+BookmarkAI is a platform designed to help users save and organize content they discover on the Internet, especially videos and articles from popular online platforms. Instead of manually saving URLs, users can rely on the browser extension to automatically send webpage URLs to the BookmarkAI system. The backend then processes the data and associates it with the appropriate user account using the Extension Code.
 
-### Không thấy nút Load unpacked
+The project is built using a Backend API architecture integrated with a browser extension. The backend manages user authentication, videos, tags, playlists, bookmarks, premium subscriptions, and dashboard analytics. The extension serves as a bridge between the user's browser and the BookmarkAI system, making content collection fast and seamless.
 
-Nguyên nhân thường là chưa bật Developer Mode.
+One of the system's key features is video and playlist management. Users can save videos, search them by title or tag, organize videos into playlists, and manage their personal collections. The system also supports automatic playlist generation based on tags, helping users categorize and retrieve content more efficiently.
 
-Cách xử lý:
+In addition, the platform includes role-based access control for both users and administrators. Regular users can manage their profiles, Extension Codes, bookmarks, and playlists, while administrators have access to user management, video management, tag management, and system analytics through an administrative dashboard. This architecture makes BookmarkAI suitable for both personal use and large-scale content management.
+
+BookmarkAI aims to save users time by simplifying content collection and retrieval. With the locally installed extension, developers and testers can quickly verify URL synchronization functionality in a development environment without publishing the extension to the Chrome Web Store.
+
+---
+
+# 6. Common Issues
+
+## "Load unpacked" Button Is Missing
+
+**Cause**
+
+Developer Mode has not been enabled.
+
+**Solution**
 
 ```text
-Vào trang Manage Extensions → bật Developer Mode
+Open the Extensions page → Enable Developer Mode
 ```
 
 ---
 
-### Load extension bị lỗi manifest
+## Manifest Error When Loading the Extension
 
-Nguyên nhân thường là chọn sai thư mục.
+**Cause**
 
-Cách xử lý:
+The wrong folder was selected.
 
-Chọn đúng thư mục chứa file:
+**Solution**
+
+Select the folder that contains:
 
 ```text
 manifest.json
 ```
 
-Trong dự án này, thư mục cần chọn là:
+For this project, the correct folder is:
 
 ```text
 bookmarkai-url-sync-extension-v25
@@ -376,40 +372,24 @@ bookmarkai-url-sync-extension-v25
 
 ---
 
-### Extension không gửi dữ liệu
-
-Có thể do một trong các nguyên nhân sau:
-
-* Backend chưa chạy.
-* Extension Code sai hoặc chưa được lưu.
-* Extension đang ở trạng thái inactive.
-* API URL chưa đúng với môi trường đang chạy.
-* Trình duyệt chưa được reload lại extension sau khi sửa code.
-
-Cách xử lý:
-
-1. Kiểm tra backend đã chạy chưa.
-2. Kiểm tra Extension Code.
-3. Bật trạng thái Active.
-4. Vào trang Manage Extensions và nhấn Reload extension.
-5. Thử mở lại trang nội dung cần lưu.
 
 ---
 
-### Đổi code nhưng extension vẫn dùng code cũ
+## The Extension Still Uses the Old Code
 
-Cách xử lý:
+**Solution**
 
-1. Mở popup extension.
-2. Nhấn Edit.
-3. Nhập Extension Code mới.
-4. Nhấn Save.
-5. Reload lại trang đang xem nếu cần.
+1. Open the extension popup.
+2. Click **Edit**.
+3. Enter the new Extension Code.
+4. Click **Save**.
+5. Refresh the current webpage if necessary.
 
 ---
 
-## 7. Ghi chú cho bản Release #1.0
+# 7. Release Notes for Version 1.0
 
-Đây là bản release dùng để cài đặt và kiểm thử extension local. Người dùng không cần tải extension từ Chrome Extension Store. Chỉ cần tải source code, giải nén, bật Developer Mode và load thư mục extension vào trình duyệt.
+This release is intended for local installation and testing purposes. Users do not need to download the extension from the Chrome Web Store. Simply download the project source code, extract it, enable Developer Mode, and load the extension folder into a Chromium-based browser.
 
-Bản này phù hợp cho môi trường development, demo và kiểm thử chức năng đồng bộ URL giữa browser extension và backend BookmarkAI.
+This version is suitable for development, demonstrations, and testing the URL synchronization workflow between the browser extension and the BookmarkAI backend.
+
