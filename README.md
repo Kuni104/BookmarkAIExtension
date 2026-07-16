@@ -45,6 +45,7 @@ a1b2-123456
 # 2. Installing the Extension Locally
 
 ## Step 1: Download the Source Code
+<img width="1677" height="745" alt="Screenshot 2026-07-16 132843" src="https://github.com/user-attachments/assets/a9af4eed-e93d-4d3a-98e2-0e22664c101d" />
 
 Download the project source code to your computer.
 
@@ -91,10 +92,12 @@ Open your browser and navigate to the Extensions Management page.
 For Google Chrome:
 
 Method 1:
+<img width="508" height="443" alt="image" src="https://github.com/user-attachments/assets/c390f1bc-7faa-4f77-8bf3-3a83a379f955" />
 
 ```text
-Three-dot Menu → Extensions → Manage Extensions
+Three-dot Menu → Extensions → Manage Extensions → Turn on developer mode
 ```
+<img width="1778" height="141" alt="image" src="https://github.com/user-attachments/assets/cc4bc73b-7609-4787-b2db-38a37073a1ed" />
 
 Method 2:
 
