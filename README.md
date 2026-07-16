@@ -8,6 +8,8 @@ The extension allows users to save and send information about the currently view
 
  <a href="https://www.producthunt.com/products/bookmarkai?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-bookmarkai" target="_blank" rel="noopener noreferrer"><img alt="Bookmarkai - visual Chrome extension to bookmark &amp; organize YouTube links | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1197128&amp;theme=neutral&amp;t=1784183065985"></a>
 
+[![Featured on Spotlitely](https://www.spotlitely.com/badge.svg)](https://www.spotlitely.com/l/bookmarkai-ai-manager-for-your-messy-social-media-bookmarks)
+
 INSTALLING INSTRUCTION BELOW
 ---
 
