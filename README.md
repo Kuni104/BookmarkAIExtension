@@ -167,8 +167,7 @@ Then select the extracted extension folder:
 bookmarkai-url-sync-extension-v25
 ```
 
-**Important:** Select only the extension folder which is bookmarkai-url-sync-extension-v25.
-<img width="1703" height="909" alt="image" src="https://github.com/user-attachments/assets/39b34c73-d7b4-4c66-b65f-2e7bd0ef9f4e" />
+**Important:** Select only the extension folder which is BookmarkAIExtension.
 
 The selected folder **must** contain:
 
