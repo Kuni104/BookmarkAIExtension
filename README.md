@@ -7,7 +7,8 @@ BookmarkAI URL Sync is a browser extension designed to synchronize URLs from you
 The extension allows users to save and send information about the currently viewed webpage to the BookmarkAI backend using an Extension Code. When users visit supported platforms such as YouTube, Facebook, Reddit, or TikTok, the extension automatically detects the current URL and sends it to the system for bookmark storage, video management, playlist organization, and future content retrieval.
 
  <a href="https://www.producthunt.com/products/bookmarkai?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-bookmarkai" target="_blank" rel="noopener noreferrer"><img alt="Bookmarkai - visual Chrome extension to bookmark &amp; organize YouTube links | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1197128&amp;theme=neutral&amp;t=1784183065985"></a>
- 
+
+INSTALLING INSTRUCTION BELOW
 ---
 
 # 1. Prerequisites
@@ -86,6 +87,12 @@ bookmarkai-url-sync-extension-v25
 ---
 
 ## Step 3: Open the Browser Extension Management Page
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=gPOC7OaPcAA" target="_blank">
+    <img src="https://youtube.com" alt="Watch how to enable Developer Mode" width="600">
+  </a>
+</p>
+
 
 Open your browser and navigate to the Extensions Management page.
 
@@ -95,9 +102,9 @@ Method 1:
 <img width="508" height="443" alt="image" src="https://github.com/user-attachments/assets/c390f1bc-7faa-4f77-8bf3-3a83a379f955" />
 
 ```text
-Three-dot Menu → Extensions → Manage Extensions → Turn on developer mode
+Three-dot Menu → Extensions → Manage Extensions 
 ```
-<img width="1778" height="141" alt="image" src="https://github.com/user-attachments/assets/cc4bc73b-7609-4787-b2db-38a37073a1ed" />
+
 
 Method 2:
 
@@ -130,7 +137,7 @@ coccoc://extensions/
 ## Step 4: Enable Developer Mode
 
 On the Extensions page, enable:
-
+<img width="1778" height="141" alt="image" src="https://github.com/user-attachments/assets/cc4bc73b-7609-4787-b2db-38a37073a1ed" />
 ```text
 Developer mode
 ```
@@ -138,6 +145,7 @@ Developer mode
 Depending on your browser, this switch is usually located in the top-right or top-left corner.
 
 After enabling Developer Mode, additional developer options will appear, including:
+<img width="1805" height="124" alt="image" src="https://github.com/user-attachments/assets/a331eeb9-b6b1-46e3-9578-bc6db36a8df0" />
 
 ```text
 Load unpacked
@@ -159,13 +167,10 @@ Then select the extracted extension folder:
 bookmarkai-url-sync-extension-v25
 ```
 
-**Important:** Select only the extension folder—not the entire backend project if it contains multiple folders.
+**Important:** Select only the extension folder which is bookmarkai-url-sync-extension-v25.
+<img width="1703" height="909" alt="image" src="https://github.com/user-attachments/assets/39b34c73-d7b4-4c66-b65f-2e7bd0ef9f4e" />
 
 The selected folder **must** contain:
-
-```text
-manifest.json
-```
 
 If everything is correct, the extension will appear in your browser with the name:
 
@@ -181,7 +186,7 @@ After successfully loading the extension, click the Extensions icon in your brow
 
 If the extension is not visible on the toolbar:
 
-1. Click the Extensions (puzzle) icon.
+1. Click the Extensions (puzzle) icon<img width="46" height="58" alt="image" src="https://github.com/user-attachments/assets/97acc9f3-6b11-43a9-85f9-392432ecf0e9" />.
 2. Find **BookmarkAI URL Sync**.
 3. Click the Pin icon.
 
@@ -250,6 +255,7 @@ Save
 ## Step 3: Enable Active Status
 
 The extension popup includes a toggle switch.
+<img width="345" height="250" alt="image" src="https://github.com/user-attachments/assets/b8bec979-da4e-4417-9c44-e1afa9122af8" />
 
 When enabled, the extension status will display:
 
@@ -257,7 +263,7 @@ When enabled, the extension status will display:
 Active
 ```
 
-If the extension is turned off, it will stop sending webpage information to the backend.
+If the extension is turned off, it will stop sending webpage information to the Server.
 
 ---
 
@@ -267,9 +273,9 @@ After entering a valid Extension Code and enabling the extension, visit one of t
 
 ```text
 YouTube
-Facebook
-Reddit
-TikTok
+Facebook(Will develop in the future)
+Reddit(Will develop in the future)
+TikTok(Will develop in the future)
 ```
 
 Whenever you open or navigate to new content, the extension automatically detects the current URL and sends it to the BookmarkAI API.
