@@ -79,7 +79,7 @@ After extraction, the project will contain the extension folder.
 For this project, the extension folder is:
 
 ```text
-bookmarkai-url-sync-extension-v25
+BookmarkAIExtension or BookmarkAIExtension-main
 ```
 
 **Note:** When loading the extension, make sure you select the folder that contains the `manifest.json` file.
@@ -379,7 +379,7 @@ manifest.json
 For this project, the correct folder is:
 
 ```text
-bookmarkai-url-sync-extension-v25
+BookmarkAIExtension or BookmarkAIExtension-main
 ```
 
 ---
