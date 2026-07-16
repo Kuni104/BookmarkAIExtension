@@ -154,6 +154,7 @@ Load unpacked
 ---
 
 ## Step 5: Load the Extension
+[![Watch how to load an unpacked extension](https://youtube.com)](https://www.youtube.com/watch?v=xiT8c8M1OIw)
 
 Click:
 
@@ -164,12 +165,13 @@ Load unpacked
 Then select the extracted extension folder:
 
 ```text
-bookmarkai-url-sync-extension-v25
+BookmarkAIExtension or BookmarkAIExtension-main
 ```
 
-**Important:** Select only the extension folder which is BookmarkAIExtension.
-
-The selected folder **must** contain:
+**Important:** Select only the extension folder which is BookmarkAIExtension or BookmarkAIExtension-main .
+<img width="1070" height="492" alt="image" src="https://github.com/user-attachments/assets/af91ea66-ac7f-466c-b0ba-1f7dafb4dc1b" />
+In this picture when you click extract all it creates 2 folders 
+Remember the selected file should have the selected folder **must** contain manifest.json file:
 
 If everything is correct, the extension will appear in your browser with the name:
 
