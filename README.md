@@ -1,4 +1,4 @@
-# BookmarkAI URL Sync Extension
+# BookmarkAI URL Sync Extension - DOWNLOAD INSTRUCTION BELOW(I ASSURE U IT'S EASY)
 
 ## RELEASE VERSION #1.0
 
