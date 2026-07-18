@@ -12,11 +12,24 @@ The extension allows users to save and send information about the currently view
 
 INSTALLING INSTRUCTION BELOW
 ---
+### 🚀 Quick Start: How It Works
+
+To experience the full power of BookmarkAI, please follow this linear 3-step setup. **Do not skip Step 1!**
+
+1. **Sign Up First** ➔ Create your free account at [bookmarkai.site](https://bookmarkai.site) to generate your unique cloud secure token.
+2. **Install Companion** ➔ Download the extension source code from this repo and load it into your Chrome browser.
+3. **Connect & Surf** ➔ Copy the **Extension Code** from your Web Profile, paste it into the extension popup, and start surfing YouTube!
+
+***
+
+> 💡 **Important Note for Extension-First Users:**
+> If you installed the browser extension first, you **must** register an account on our Web App to receive an activation code. The extension cannot process AI semantic searches without connecting to our cloud infrastructure.
+
+
 
 # 1. Prerequisites
 
 Before installing the extension, make sure you have:
-
 * A Chromium-based browser, such as:
 
   * Google Chrome
@@ -204,6 +217,7 @@ Pinning the extension allows quick access whenever you need to enter your Extens
 Click the **BookmarkAI URL Sync** icon on your browser toolbar.
 
 The popup interface includes:
+<img width="342" height="314" alt="Screenshot 2026-07-15 165848" src="https://github.com/user-attachments/assets/dee5f24e-29ec-4ec7-8900-f0ca0fa17103" />
 
 * Extension status
 * Extension Code input field
@@ -217,10 +231,12 @@ The popup interface includes:
 ## Step 2: Enter Your Extension Code
 
 Enter the Extension Code provided by the BookmarkAI system into the:
+<img width="1898" height="894" alt="Screenshot 2026-07-18 081559" src="https://github.com/user-attachments/assets/d30af77f-f439-49ff-9f19-a32f52c4cce8" />
 
 ```text
 Extension Code
 ```
+<img width="342" height="314" alt="Screenshot 2026-07-15 165848" src="https://github.com/user-attachments/assets/b9ecb7b8-0022-4dd7-8580-e4eb2fc9e0cd" />
 
 field.
 
@@ -258,7 +274,7 @@ Save
 ## Step 3: Enable Active Status
 
 The extension popup includes a toggle switch.
-<img width="345" height="250" alt="image" src="https://github.com/user-attachments/assets/b8bec979-da4e-4417-9c44-e1afa9122af8" />
+<img width="342" height="314" alt="Screenshot 2026-07-15 165848" src="https://github.com/user-attachments/assets/b9ecb7b8-0022-4dd7-8580-e4eb2fc9e0cd" />
 
 When enabled, the extension status will display:
 
@@ -325,7 +341,7 @@ From there, users can log in, view saved bookmarks and videos, manage playlists,
 
 # 4. Notes
 
-* This extension is installed from local source code and is **not** distributed through the Chrome Web Store.
+* This extension is installed from local source code and is **not** distributed through the Chrome Web Store YET.
 * If your browser displays a warning about Developer Mode extensions, this is expected behavior for locally installed extensions.
 * Do not delete or move the extension folder after installation. Otherwise, the extension may stop working.
 * After modifying the extension source code, go to the Extensions page and click **Reload** to load the latest changes.
