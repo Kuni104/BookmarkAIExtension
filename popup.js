@@ -61,7 +61,7 @@ activeToggle.addEventListener("change", async () => {
 });
 
 openWebsiteButton.addEventListener("click", () => {
-  chrome.tabs.create({ url: "http://localhost:54343" });
+  chrome.tabs.create({ url: "https://bookmarkai.site" });
 });
 
 sendModeToggle.addEventListener("change", async () => {
