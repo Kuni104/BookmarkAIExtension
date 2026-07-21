@@ -4,7 +4,7 @@
 
 BookmarkAI URL Sync is a browser extension designed to synchronize URLs from your browser with the BookmarkAI system. This extension is installed directly from the local source code instead of the Chrome Web Store.
 
-The extension allows users to save and send information about the currently viewed webpage to the BookmarkAI backend using an Extension Code. When users visit supported platforms such as YouTube, Facebook, Reddit, or TikTok, the extension automatically detects the current URL and sends it to the system for bookmark storage, video management, playlist organization, and future content retrieval.
+The extension allows users to save and send information about the currently viewed webpage to the BookmarkAI backend using an Extension Code. When users visit supported platforms such as YouTube, Facebook, Reddit, or TikTok, the extension automatically detects the current URL and sends it to the system for bookmark storage, video management, playlist organization, and future content retrieval. This is not just a bookmarking, its a second memory in which look back your memory with a single thought
 
  <a href="https://www.producthunt.com/products/bookmarkai?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-bookmarkai" target="_blank" rel="noopener noreferrer"><img alt="Bookmarkai - visual Chrome extension to bookmark &amp; organize YouTube links | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1197128&amp;theme=neutral&amp;t=1784183065985"></a>
 
