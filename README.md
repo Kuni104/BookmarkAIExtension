@@ -12,6 +12,7 @@ The extension allows users to save and send information about the currently view
 
 INSTALLING INSTRUCTION BELOW
 ---
+[![Bookmark AI tutorial](https://img.youtube.com/vi/0h_T_3mKugE/maxresdefault.jpg)](https://www.youtube.com/watch?v=0h_T_3mKugE)
 ### 🚀 Quick Start: How It Works
 
 To experience the full power of BookmarkAI, please follow this linear 3-step setup. **Do not skip Step 1!**
