@@ -105,7 +105,9 @@ BookmarkAIExtension or BookmarkAIExtension-main
 ## Step 3: Open the Browser Extension Management Page
 <p align="center">
   <a href="https://www.youtube.com/watch?v=gPOC7OaPcAA" target="_blank">
-    <img src="https://youtube.com" alt="Watch how to enable Developer Mode" width="600">
+    <img src="https://img.youtube.com/vi/gPOC7OaPcAA/maxresdefault.jpg"
+         alt="Watch how to enable Developer Mode"
+         width="600">
   </a>
 </p>
 
@@ -170,7 +172,7 @@ Load unpacked
 ---
 
 ## Step 5: Load the Extension
-[![Watch how to load an unpacked extension](https://youtube.com)](https://www.youtube.com/watch?v=xiT8c8M1OIw)
+[![Watch how to load an unpacked extension](https://img.youtube.com/vi/xiT8c8M1OIw/maxresdefault.jpg)](https://www.youtube.com/watch?v=xiT8c8M1OIw)
 
 Click:
 
