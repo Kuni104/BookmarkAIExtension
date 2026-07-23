@@ -10,6 +10,8 @@ The extension allows users to save and send information about the currently view
 
 [![Featured on Spotlitely](https://www.spotlitely.com/badge.svg)](https://www.spotlitely.com/l/bookmarkai-ai-manager-for-your-messy-social-media-bookmarks)
 
+[Feedback here](https://forms.gle/6Y86deMfpemjkLx46)
+
 INSTALLING INSTRUCTION BELOW
 ---
 [![Bookmark AI tutorial](https://img.youtube.com/vi/0h_T_3mKugE/maxresdefault.jpg)](https://www.youtube.com/watch?v=0h_T_3mKugE)
