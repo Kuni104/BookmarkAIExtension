@@ -12,6 +12,8 @@ The extension allows users to save and send information about the currently view
 
 [Feedback here](https://forms.gle/6Y86deMfpemjkLx46)
 
+[Instruction video here](https://www.facebook.com/profile.php?id=61590560976875&mibextid=ZbWKwL)
+
 INSTALLING INSTRUCTION BELOW
 ---
 [![Bookmark AI tutorial](https://img.youtube.com/vi/0h_T_3mKugE/maxresdefault.jpg)](https://www.youtube.com/watch?v=0h_T_3mKugE)
